@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+    <!--Description-->
+    
+        <meta name="description" content="Supermarket data annotation with ECO: demo
+IntroductionTrying to build a cognitive map from First-Person videos that can be used to understand novel b">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Xuefei Li">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="eco"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="XuefeiLi(李雪霏)"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>eco - XuefeiLi(李雪霏)</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!--Favicon-->
+    
+
+</head>
+
+<body>
+
+<!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/">XuefeiLi(李雪霏)</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+        <ul class="social clearfix">
+            
+            
+                <li><a href="https://www.facebook.com/" class="fb" target="_blank" data-title="Facebook"></a></li>
+            
+            
+                <li><a href="https://www.behance.net/" class="behance" target="_blank" data-title="Behance"></a></li>
+            
+            
+                <li><a href="https://plus.google.com/+Pixelhint/posts" class="google" target="_blank" data-title="Google+"></a></li>
+            
+            
+                <li><a href="https://dribbble.com/pixelhint" class="dribble" target="_blank" data-title="Dribble"></a></li>
+            
+            
+            
+            
+        </ul><!-- end social -->
+
+        <div class="rights">
+            <p>Copyright © 2014 magnetic.</p>
+            <p>Template by <a href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/" target="_blank" rel="noopener">Pixelhint.com</a></p>
+            <p>Hexo Theme by <a href="http://www.codeblocq.com/" target="_blank" rel="noopener">Jonathan K.</a></p>
+        </div><!-- end rights -->
+    </div ><!-- end footer -->
+</header><!-- end header -->
+
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('/assets/header.jpeg');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a class="previous disabled"></a></li>
+        
+        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
+        
+        <li><a href="/2019/11/02/Food-web-visualization/" class="next" data-title="Food web visualiz..."></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">eco</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <p>Supermarket data annotation with ECO: <a href="https://youtu.be/hXdrkFC4Pvw" target="_blank" rel="noopener">demo</a></p>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Trying to build a cognitive map from First-Person videos that can be used to understand <em>novel</em> but <em>similar</em> environments.</p>
+<p>Local Egocentric Maps</p>
+<p><img src="/assets/eco/eco1.jpg" alt="eco1">)<img src="/assets/eco/eco2.jpg" alt="eco2"></p>
+<p>Local Egocentric Maps</p>
+<ol>
+<li>Frontalization via Homography</li>
+</ol>
+<p><img src="/assets/eco/eco3.png" alt="eco3"></p>
+<ol start="2">
+<li>Rescaling for canonical depth viewpoint</li>
+</ol>
+<p><img src="/assets/eco/eco4.png" alt="eco4"></p>
+<ol>
+<li>Undistort the image using camera intrinsic parameters</li>
+<li>Compute vanishing points from images</li>
+</ol>
+<p><img src="/assets/eco/eco5.png" alt="eco5"></p>
+<ol start="3">
+<li>Compute vps reprojection error on images</li>
+<li>Adjust major axes to make sure your objects are in the bounding box</li>
+</ol>
+<p><img src="/assets/eco/eco6.png" alt="eco6"></p>
+<ol start="5">
+<li>Adjust axes index and label the object</li>
+</ol>
+<p><img src="/assets/eco/eco7.png" alt="eco7"></p>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+
+
+
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="/js/jquery.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+
+</html>
