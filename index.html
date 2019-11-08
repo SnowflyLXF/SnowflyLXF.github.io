@@ -51,6 +51,9 @@
 
     <!--Favicon-->
     
+        <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+    
 
 </head>
 
@@ -78,32 +81,6 @@
         </ul>
     </nav><!-- end navigation menu -->
 
-    <div class="footer clearfix">
-        <ul class="social clearfix">
-            
-            
-                <li><a href="https://www.facebook.com/" class="fb" target="_blank" data-title="Facebook"></a></li>
-            
-            
-                <li><a href="https://www.behance.net/" class="behance" target="_blank" data-title="Behance"></a></li>
-            
-            
-                <li><a href="https://plus.google.com/+Pixelhint/posts" class="google" target="_blank" data-title="Google+"></a></li>
-            
-            
-                <li><a href="https://dribbble.com/pixelhint" class="dribble" target="_blank" data-title="Dribble"></a></li>
-            
-            
-            
-            
-        </ul><!-- end social -->
-
-        <div class="rights">
-            <p>Copyright © 2014 magnetic.</p>
-            <p>Template by <a href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/" target="_blank" rel="noopener">Pixelhint.com</a></p>
-            <p>Hexo Theme by <a href="http://www.codeblocq.com/" target="_blank" rel="noopener">Jonathan K.</a></p>
-        </div><!-- end rights -->
-    </div ><!-- end footer -->
 </header><!-- end header -->
 
 
@@ -111,14 +88,42 @@
 <section class="main clearfix">
     
         <div class="work">
-    <a href="/2019/11/03/eco/">
-        <img src="http://placehold.it/450x450" class="media" alt=""/>
+    <a href="/2019/11/07/intro/">
+        <img src="/assets/work1.jpg" class="media" alt=""/>
         <div class="caption">
             <div class="work_title">
-                <h1>eco</h1>
+                <h1>Introduction</h1>
             </div>
             <div class="work_note">
-            	Untitled
+            	Xuefei Li<br>MS in Computer Science at University of Minnesota, Twin-cities.<br>Interest in Computer Graphics, vision.<br>Welcome to my site! Click to see more about myself.
+            </div>
+        </div>
+    </a>
+</div>
+    
+        <div class="work">
+    <a href="/2019/11/04/Mimic-Robot/">
+        <img src="/assets/work8.gif" class="media" alt=""/>
+        <div class="caption">
+            <div class="work_title">
+                <h1>Mimic Robot</h1>
+            </div>
+            <div class="work_note">
+            	Data-driven character animation with daily videos.
+            </div>
+        </div>
+    </a>
+</div>
+    
+        <div class="work">
+    <a href="/2019/11/03/eco/">
+        <img src="/assets/work6.gif" class="media" alt=""/>
+        <div class="caption">
+            <div class="work_title">
+                <h1>Egocentric Cognitive Mapping</h1>
+            </div>
+            <div class="work_note">
+            	This project tries to build a cognitive map from First-Person videos.
             </div>
         </div>
     </a>
@@ -139,21 +144,21 @@
 </div>
     
         <div class="work">
-    <a href="/2019/11/02/Graphics-practice/">
-        <img src="/assets/work4.jpg" class="media" alt=""/>
+    <a href="/2019/10/27/undersea/">
+        <img src="/assets/work2.gif" class="media" alt=""/>
         <div class="caption">
             <div class="work_title">
-                <h1>Computer Graphics practice</h1>
+                <h1>Undersea Game</h1>
             </div>
             <div class="work_note">
-            	Assignments for Computer Graphics courses at UMN.
+            	This project is a 3D game, mainly based on OpenGL and SDL2.
             </div>
         </div>
     </a>
 </div>
     
         <div class="work">
-    <a href="/2019/10/29/Dempost/">
+    <a href="/2019/10/09/Dempost/">
         <img src="/assets/work3.gif" class="media" alt=""/>
         <div class="caption">
             <div class="work_title">
@@ -167,28 +172,28 @@
 </div>
     
         <div class="work">
-    <a href="/2019/10/27/intro/">
-        <img src="/assets/work1.jpg" class="media" alt=""/>
+    <a href="/2019/10/08/Texture-map/">
+        <img src="/assets/work7.png" class="media" alt=""/>
         <div class="caption">
             <div class="work_title">
-                <h1>self-introduction</h1>
+                <h1>Texture map</h1>
             </div>
             <div class="work_note">
-            	Xuefei Li<br>MS in Computer Science at University of Minnesota, Twin-cities.<br>Interest in Computer Graphics, vision.<br>Welcome to my site! Click to see more about myself.
+            	From multi-view image data to continuous rendering model.
             </div>
         </div>
     </a>
 </div>
     
         <div class="work">
-    <a href="/2019/10/27/undersea/">
-        <img src="/assets/work2.gif" class="media" alt=""/>
+    <a href="/2018/11/02/Computer-Graphics/">
+        <img src="/assets/work4.jpg" class="media" alt=""/>
         <div class="caption">
             <div class="work_title">
-                <h1>Undersea Game</h1>
+                <h1>Computer Graphics practice</h1>
             </div>
             <div class="work_note">
-            	This project is a 3D game, mainly based on OpenGL and SDL2.
+            	Assignments for Computer Graphics courses at UMN.
             </div>
         </div>
     </a>
@@ -211,6 +216,21 @@
 <!-- Disqus Comments -->
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

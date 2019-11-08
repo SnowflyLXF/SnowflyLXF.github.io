@@ -10,8 +10,8 @@
 
     <!--Description-->
     
-        <meta name="description" content="Supermarket data annotation with ECO: demo
-IntroductionTrying to build a cognitive map from First-Person videos that can be used to understand novel b">
+        <meta name="description" content="Supermarket data annotation with ECO: demo with Prof. Hyun Soo Park’s group at UMN.
+IntroductionTrying to build a cognitive map from First-Person vide">
     
 
     <!--Author-->
@@ -21,7 +21,7 @@ IntroductionTrying to build a cognitive map from First-Person videos that can be
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="eco"/>
+        <meta property="og:title" content="Egocentric Cognitive Mapping"/>
     
 
     <!--Open Graph Site Name-->
@@ -34,7 +34,7 @@ IntroductionTrying to build a cognitive map from First-Person videos that can be
 
     <!-- Title -->
     
-    <title>eco - XuefeiLi(李雪霏)</title>
+    <title>Egocentric Cognitive Mapping - XuefeiLi(李雪霏)</title>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/reset.css">
@@ -55,6 +55,9 @@ IntroductionTrying to build a cognitive map from First-Person videos that can be
 
 
     <!--Favicon-->
+    
+        <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
     
 
 </head>
@@ -83,32 +86,6 @@ IntroductionTrying to build a cognitive map from First-Person videos that can be
         </ul>
     </nav><!-- end navigation menu -->
 
-    <div class="footer clearfix">
-        <ul class="social clearfix">
-            
-            
-                <li><a href="https://www.facebook.com/" class="fb" target="_blank" data-title="Facebook"></a></li>
-            
-            
-                <li><a href="https://www.behance.net/" class="behance" target="_blank" data-title="Behance"></a></li>
-            
-            
-                <li><a href="https://plus.google.com/+Pixelhint/posts" class="google" target="_blank" data-title="Google+"></a></li>
-            
-            
-                <li><a href="https://dribbble.com/pixelhint" class="dribble" target="_blank" data-title="Dribble"></a></li>
-            
-            
-            
-            
-        </ul><!-- end social -->
-
-        <div class="rights">
-            <p>Copyright © 2014 magnetic.</p>
-            <p>Template by <a href="http://pixelhint.com/magnetic-free-html5-responsive-photography-website-template/" target="_blank" rel="noopener">Pixelhint.com</a></p>
-            <p>Hexo Theme by <a href="http://www.codeblocq.com/" target="_blank" rel="noopener">Jonathan K.</a></p>
-        </div><!-- end rights -->
-    </div ><!-- end footer -->
 </header><!-- end header -->
 
 
@@ -123,7 +100,7 @@ IntroductionTrying to build a cognitive map from First-Person videos that can be
 
     <ul class="btn clearfix">
         
-        <li><a class="previous disabled"></a></li>
+        <li><a href="/2019/11/04/Mimic-Robot/" class="previous" data-title="Mimic Robot"></a></li>
         
         <li><a href="/" class="grid" data-title="Portfolio"></a></li>
         
@@ -132,7 +109,7 @@ IntroductionTrying to build a cognitive map from First-Person videos that can be
     </ul>
 
 </div><!-- end work_nav -->
-            <h1 class="title">eco</h1>
+            <h1 class="title">Egocentric Cognitive Mapping</h1>
         </div>
     </section><!-- end top -->
 
@@ -143,8 +120,9 @@ IntroductionTrying to build a cognitive map from First-Person videos that can be
             
 
             <!-- Content -->
-            <p>Supermarket data annotation with ECO: <a href="https://youtu.be/hXdrkFC4Pvw" target="_blank" rel="noopener">demo</a></p>
-<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Trying to build a cognitive map from First-Person videos that can be used to understand <em>novel</em> but <em>similar</em> environments.</p>
+            <p><img src="/assets/eco/eco.gif" alt="eco"></p>
+<p>Supermarket data annotation with ECO: <a href="https://youtu.be/3wsUlLbtzko" target="_blank" rel="noopener">demo</a> with Prof. Hyun Soo Park’s group at UMN.</p>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Trying to build a cognitive map from First-Person videos that can be used to understand <em>novel</em> but <em>similar</em> environments, which will benefit visually-impaired people.</p>
 <p>Local Egocentric Maps</p>
 <p><img src="/assets/eco/eco1.jpg" alt="eco1">)<img src="/assets/eco/eco2.jpg" alt="eco2"></p>
 <p>Local Egocentric Maps</p>
@@ -156,18 +134,28 @@ IntroductionTrying to build a cognitive map from First-Person videos that can be
 <li>Rescaling for canonical depth viewpoint</li>
 </ol>
 <p><img src="/assets/eco/eco4.png" alt="eco4"></p>
+<p>My work mainly focus on the egocentric recognition of sections in supermarket with a novel interface by leveraging scene geometry and reconstructed camera motion.</p>
 <ol>
-<li>Undistort the image using camera intrinsic parameters</li>
-<li>Compute vanishing points from images</li>
+<li><p>Undistort the image using camera intrinsic parameters</p>
+<p>Assume that sections are aligned with the three principal orthogonal directions of the scene.</p>
+</li>
+<li><p>Calculate three mutually orthogonal vanishing points. We manually select points vp_x and vp_y in X and Y directions in camera coordinate system.<br>Consider the 3D point where the X axis (in camera coordinates) meets the projective line corresponding to vp_x,  let this point be Xp. Using K for the camera intrinsic parameters, R and C for pose, we must have</p>
+</li>
 </ol>
+<p>$$\lambda v p_x=KR(X_p-C)\Rightarrow X_p-C=\lambda R^T K^{-1} v p_x$$</p>
+<p>The X axis direction in 3D is thus given by unit(Xp−C). Similarly, the Y direction and the gravity vector is obtained as the cross product of the two. We observe that using the cross product gives more stable gravity vector compared to simply using the output from the algorithm.</p>
 <p><img src="/assets/eco/eco5.png" alt="eco5"></p>
 <ol start="3">
-<li>Compute vps reprojection error on images</li>
-<li>Adjust major axes to make sure your objects are in the bounding box</li>
+<li><p>Triangulate an origin point in 3D using pixel correspondence between two images. </p>
+</li>
+<li><p>Using the origin and axes, construct a bounding box in 3D that is projected onto the image.</p>
+</li>
+<li><p>Keyboard input to the interface can be used to move each of the faces of the box in the normal direction.</p>
+</li>
 </ol>
 <p><img src="/assets/eco/eco6.png" alt="eco6"></p>
-<ol start="5">
-<li>Adjust axes index and label the object</li>
+<ol start="6">
+<li>propagate labels to the box.</li>
 </ol>
 <p><img src="/assets/eco/eco7.png" alt="eco7"></p>
 
@@ -177,7 +165,7 @@ IntroductionTrying to build a cognitive map from First-Person videos that can be
 
 
 <div class="tags">
-    
+    <a href="/tags/Computer-Vision-3D-reconstruction/">Computer Vision, 3D reconstruction</a>
 </div>
 
 
@@ -208,6 +196,21 @@ IntroductionTrying to build a cognitive map from First-Person videos that can be
 <!-- Disqus Comments -->
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
