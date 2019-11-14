@@ -209,4 +209,26 @@
     
   </entry>
   
+  <entry>
+    <title>Dear Data</title>
+    <link href="http://yoursite.com/2018/10/14/Dear-Data/"/>
+    <id>http://yoursite.com/2018/10/14/Dear-Data/</id>
+    <published>2018-10-14T06:43:34.000Z</published>
+    <updated>2019-11-14T08:01:15.829Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Weekly “visual creativity enhancing” exercise, making us think creatively about new ways of mapping data to visuals and quickly prototype them. If they seem to work well, then we might later program a visualization to use the same visual style. What’s more, the process of collecting our own data will make us think about and develop a more “humanistic” approach to working with data. There is always a human somewhere behind the data, and, as a discipline, we need to become more aware of this throughout the entire data science pipeline.</p><p>To know more about the “Dear Data” project: <a href="https://www.ted.com/talks/giorgia_lupi_how_we_can_find_ourselves_in_data#t-225912" target="_blank" rel="noopener">Georgia Lupi’s Ted Talk</a>.</p><ol><li><p>Collect Some Data During the Week</p></li><li><p>Design a Creative Mapping from Data to Visual</p></li><li><p>Create a Postcard-Sized Visualization with Non-Traditional Visualization Media</p></li></ol><h3 id="My-works"><a href="#My-works" class="headerlink" title="My works"></a>My works</h3><p><img src="/assets/deardata/dd1.png" alt="dd1"></p><p><img src="/assets/deardata/dd2.png" alt="dd2"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h3&gt;&lt;p&gt;Weekly “visual creativity enha
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
 </feed>
