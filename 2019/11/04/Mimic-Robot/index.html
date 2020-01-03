@@ -128,6 +128,7 @@
 <p><img src="/assets/mimcrobot/mr3.png" alt="mr3"></p>
 <h3 id="3D-reconstruction"><a href="#3D-reconstruction" class="headerlink" title="3D reconstruction"></a>3D reconstruction</h3><p>While simply pass the generated pose to the character failed, because the body configurations are different, and that the generated 3D poses are neither stable nor reliable. Therefore we will implement Reinforcement Learning to predict poses for each frame, and sequence them into a trajectory to generate a consistant motion .</p>
 <p><img src="/assets/mimcrobot/mr4.png" alt="mr4"></p>
+<p><img src="/assets/mimcrobot/mr6.gif" alt="mr5"></p>
 <p>This part will be completed by this semester.</p>
 
 
@@ -167,6 +168,21 @@
 <!-- Disqus Comments -->
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

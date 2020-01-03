@@ -10,8 +10,6 @@
 
     <!--Description-->
     
-        <meta name="description" content="IntroductionThis project is my Plan B project for M.S. degree at UMN, instructed by Prof. Stephen J. Guy. It is about data-driven character animation.">
-    
 
     <!--Author-->
     
@@ -20,7 +18,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Mimic Robot"/>
+        <meta property="og:title" content="pageName"/>
     
 
     <!--Open Graph Site Name-->
@@ -33,7 +31,7 @@
 
     <!-- Title -->
     
-    <title>Mimic Robot - XuefeiLi(李雪霏)</title>
+    <title>pageName - XuefeiLi(李雪霏)</title>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/reset.css">
@@ -75,7 +73,7 @@
         <ul>
             
             <li>
-                <a href="/2019/11/07/intro/">Home</a>
+                <a href="/">Home</a>
             </li>
             
             <li>
@@ -93,22 +91,7 @@
 
     <section class="top" style="background: url('/assets/header.jpeg');">
         <div class="wrapper content_header clearfix">
-            
-
-<div class="work_nav">
-
-    <ul class="btn clearfix">
-        
-        <li><a href="/2019/11/07/intro/" class="previous" data-title="Introduction"></a></li>
-        
-        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
-        
-        <li><a href="/2019/11/03/eco/" class="next" data-title="Egocentric Cognit..."></a></li>
-        
-    </ul>
-
-</div><!-- end work_nav -->
-            <h1 class="title">Mimic Robot</h1>
+            <h1 class="title">pageName</h1>
         </div>
     </section><!-- end top -->
 
@@ -119,27 +102,7 @@
             
 
             <!-- Content -->
-            <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>This project is my Plan B project for M.S. degree at UMN, instructed by Prof. Stephen J. Guy. It is about data-driven character animation. The data I used is daily videos, instead of motion capture data, which is a more difficult task. First task is to generate pose estimation given a video clip, and transfer the pose to artificial character and reconstruct the 3d pose. Reinforcement learning is necessary in the process to generate plausible pose.</p>
-<h3 id="Pose-estimation"><a href="#Pose-estimation" class="headerlink" title="Pose estimation"></a>Pose estimation</h3><p>Use <a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose" target="_blank" rel="noopener">OpenPose</a> to generate 2D real-time multi-person keypoint detection.</p>
-<p><img src="/assets/mimcrobot/mr1.png" alt="mr1"></p>
-<p> Keypoints are stored in array and passed to another model from <a href="https://github.com/facebookresearch/VideoPose3D" target="_blank" rel="noopener">VideoPose3D</a> - 3D human pose estimation in video with temporal convolutions and semi-supervised training,</p>
-<p><img src="/assets/mimcrobot/mr2.gif" alt="mr2"></p>
-<p>Notice that the output from Openpose is usually BODY_25  format which includes 25 keypoints each frame, however Videopose3D accepts 17 keypoints. The previous output need to be translated</p>
-<p><img src="/assets/mimcrobot/mr3.png" alt="mr3"></p>
-<h3 id="3D-reconstruction"><a href="#3D-reconstruction" class="headerlink" title="3D reconstruction"></a>3D reconstruction</h3><p>While simply pass the generated pose to the character failed, because the body configurations are different, and that the generated 3D poses are neither stable nor reliable. Therefore we will implement Reinforcement Learning to predict poses for each frame, and sequence them into a trajectory to generate a consistant motion .</p>
-<p><img src="/assets/mimcrobot/mr4.png" alt="mr4"></p>
-<p>This part will be completed by this semester.</p>
-
-
-            <!-- Tags -->
             
-
-
-<div class="tags">
-    <a href="/tags/Character-animation-Pose-Estimation-Reinforcement-Learning/">Character animation, Pose Estimation, Reinforcement Learning</a>
-</div>
-
-
 
             <!-- Comments -->
             <div>
