@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+    <!--Description-->
+    
+        <meta name="description" content="This project is my Plan B project for M.S. degree at UMN, instructed by Prof. Stephen J. Guy. It is about data-driven character animation. The data I ">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Xuefei Li">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Mimic Robot"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="XuefeiLi(李雪霏)"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>Mimic Robot - XuefeiLi(李雪霏)</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/reset.css">
+
+    
+<link rel="stylesheet" href="/css/main.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!--Favicon-->
+    
+        <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+    
+
+<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/">XuefeiLi(李雪霏)</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+</header><!-- end header -->
+
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('/assets/header.jpeg');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a href="/2019/11/07/intro/" class="previous" data-title="Introduction"></a></li>
+        
+        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
+        
+        <li><a href="/2019/11/03/eco/" class="next" data-title="Egocentric Cognit..."></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">Mimic Robot</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <p>This project is my Plan B project for M.S. degree at UMN, instructed by Prof. Stephen J. Guy. It is about data-driven character animation. The data I used is daily videos, instead of motion capture data, which is a more difficult task. First task is to generate pose estimation given a video clip, and transfer the pose to artificial character and reconstruct the 3d pose. Reinforcement learning is necessary in the process to generate plausible pose.</p>
+<p><a href="https://docs.google.com/presentation/d/1cPaCvaVVI2ldeOwUuJHkFVUTCsOKkS-o/edit?usp=sharing&ouid=106807665038464439636&rtpof=true&sd=true" target="_blank" rel="noopener">Slides</a>, <a href="https://xuefei-lxf.github.io/pdf/report.pdf" target="_blank" rel="noopener">Report</a>, <a href="https://xuefei-lxf.github.io/video/mimic.mov" target="_blank" rel="noopener">Demo</a></p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Physics-based simulation of passive phenomena of objects is common, while modeling motion of humans and animals is challenging.</p>
+<p>Manually made controller could be stylized and engaging, however it has many drawbacks,<br>It doesn’t have generality;<br>It requiring considerable effort to construct, the range of motions is limited to the space of all possible reactions</p>
+<h3 id="How-to-get-motions"><a href="#How-to-get-motions" class="headerlink" title="How to get motions?"></a>How to get motions?</h3><ol>
+<li>Motion Capture</li>
+<li>In-the-wild videos</li>
+</ol>
+<h3 id="Goal-train-physically-simulated-characters-to-imitating-reference-motion-from-daily-videos"><a href="#Goal-train-physically-simulated-characters-to-imitating-reference-motion-from-daily-videos" class="headerlink" title="Goal:  train physically simulated characters to imitating reference motion from daily videos"></a>Goal:  train physically simulated characters to imitating reference motion from daily videos</h3><p><img src="/assets/mimcrobot/overview.png" alt="overview"></p>
+<h2 id="Pose-estimation"><a href="#Pose-estimation" class="headerlink" title="Pose estimation"></a>Pose estimation</h2><p>Use <a href="https://github.com/CMU-Perceptual-Computing-Lab/openpose" target="_blank" rel="noopener">OpenPose</a> to generate 2D real-time multi-person keypoint detection.</p>
+<p><img src="/assets/mimcrobot/mr1.png" alt="mr1"></p>
+<p> Keypoints are stored in array and passed to another model from <a href="https://github.com/facebookresearch/VideoPose3D" target="_blank" rel="noopener">VideoPose3D</a> - 3D human pose estimation in video with temporal convolutions and semi-supervised training,</p>
+<p><img src="/assets/mimcrobot/mr2.gif" alt="mr2"></p>
+<h2 id="3D-reconstruction"><a href="#3D-reconstruction" class="headerlink" title="3D reconstruction"></a>3D reconstruction</h2><p>Chanllenges:</p>
+<ul>
+<li>Lack of largescale ground truth 3D annotation for in-the-wild images</li>
+<li>Inherent ambiguities in single-view 2D-to-3D mapping</li>
+<li>Depth ambiguity where multiple 3D body configurations explain the same 2D projections</li>
+<li>…</li>
+</ul>
+<p>After extracting features from images, use a temporal generation network to preserve some temporal information, also apply adversarial learning  a large-scale MoCap dataset to generate kinematically plausible motion sequences.</p>
+<!-- <p float="left"> -->
+<p><img align="left" src="/assets/mimcrobot/pose1.gif" width="140" height="250"/><img align="left" src="/assets/mimcrobot/pose2.gif" width="450" height="250"/> <img align="rightt" src="/assets/mimcrobot/pose3.gif" width="250" height="250" /></p>
+<!-- </p> -->
+
+
+<h3 id="Pose-transfer"><a href="#Pose-transfer" class="headerlink" title="Pose transfer:"></a>Pose transfer:</h3><img src="/assets/mimcrobot/pose.png" width="700" height="400" />
+<!-- ![pt](/assets/mimcrobot/pose.png)  -->
+
+<p>Sequences of poses ransformed into:<br>root position (3D), root rotation (4D), chest rotation (4D), neck rotation (4D), right hip rotation (4D), right knee rotation (1D), right ankle rotation (4D), right shoulder rotation (4D), right elbow rotation (1D), left hip rotation (4D), left knee rotation (1D), left ankle rotation (4D), left shoulder rotation (4D), left elbow rotation (1D) </p>
+<h2 id="Motion-imitation"><a href="#Motion-imitation" class="headerlink" title="Motion imitation"></a>Motion imitation</h2><p>Simulation environment: PyBullet<br>State: relative positions, rotations, linear and angular velocities of each link with respect to the root<br>Action:  target orientations for PD controllers at each joint<br>Policy determines which actions should be applied at each timestep in order to reproduce the desired motion </p>
+<p><img src="/assets/mimcrobot/test1.gif" alt="t1"> <img src="/assets/mimcrobot/test2.gif" alt="t2"><br>Test on mocap data (up) and in-the-wild video (down) after training with 8 workers for 1 day.</p>
+<!-- While simply pass the generated pose to the character failed, because the body configurations are different, and that the generated 3D poses are neither stable nor reliable. Therefore we will implement Reinforcement Learning to predict poses for each frame, and sequence them into a trajectory to generate a consistant motion .
+
+![mr4](/assets/mimcrobot/mr4.png)
+
+![mr5](/assets/mimcrobot/mr6.gif)
+
+This part will be completed by this semester. -->
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    <a href="/tags/Character-animation-Pose-Estimation-Reinforcement-Learning/">Character animation, Pose Estimation, Reinforcement Learning</a>
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+
+
+
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+
+<script src="/js/jquery.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+    <!--Description-->
+    
+        <meta name="description" content="This is a visualization project with Bell Museum at St. Paul, Minnesota, presented on May 4th, 2019. Intended audience are visitors to the Museum at a">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Xuefei Li">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Food web visualization"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="XuefeiLi(李雪霏)"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>Food web visualization - XuefeiLi(李雪霏)</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/reset.css">
+
+    
+<link rel="stylesheet" href="/css/main.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!--Favicon-->
+    
+        <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+    
+
+<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/">XuefeiLi(李雪霏)</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+</header><!-- end header -->
+
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('/assets/header.jpeg');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a href="/2019/11/03/eco/" class="previous" data-title="Egocentric Cognitive Mapping"></a></li>
+        
+        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
+        
+        <li><a href="/2019/10/27/undersea/" class="next" data-title="Undersea Game"></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">Food web visualization</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <p>This is a visualization project with Bell Museum at St. Paul, Minnesota, presented on May 4th, 2019. Intended audience are visitors to the Museum at all age, biology researchers, university students.</p>
+<p>I work in small team with Yichun Yan, instructed by Prof. Daniel Keefe and Bell Museum. I’m mainly responsible for the visual part, including model design, coding in Processing and Javascript (P5.js) for the model and UI design for the website.</p>
+<p>It is a visualization task for understanding the physical reality of food webs. In order to depict food webs graphically, I designed several models that capture the richness, topology as well as dynamics of the system, and served as a comparison to the existing display at the museum. As a visualization tool for the audience at the museum, it proved to have an excellent user experience, which allows for convenient interaction. The audience was guided through an interactive tour from Lake Superior to the ocean, from ecosystem to every single species inside. There is also a game inside, which is creative and fun. Children were especially engaged during our demonstration; they were excited to learn using this tool. What makes the project stands out is that they make connections to the knowledge we covered in class, including color, graphs, and storytelling to convey information. </p>
+<p>Presentation website demo: <a href="https://joeblack220.github.io/FoodWebPage/?nsukey=1JrIJp0lHfImNxq17HF2aN2piQ687xhkzAhXudEHxsIWGVYgI%2FVZMY9ffYoiuPJxrt%2BV0sRyH19%2Bd7iqb5s6VJaUkvYChlpVJOaU5RD8Js1JMz5%2BilPlpbkyNPqM8Xz013jTlraRd5fNj19FokGQVQ%3D%3D" target="_blank" rel="noopener">FoodWebVis</a>, <a href="https://github.com/JoeBlack220/CSci5609" target="_blank" rel="noopener">Code</a></p>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>The first page of the website:</p>
+<p><img src="/assets/vis/vis1.gif" alt="vis1"></p>
+<p>shows a randomly generated food chains which corresponds with the the food web which is presented at Bell Museum:</p>
+<p><img src="/assets/vis/vis6.png" alt="vis6"></p>
+<p>An food web example in Minnesota:</p>
+<p><img src="/assets/vis/vis2.png" alt="vis2"></p>
+<p><img src="/assets/vis/vis3.png" alt="vis3"></p>
+<h3 id="Food-web-in-ecosystems"><a href="#Food-web-in-ecosystems" class="headerlink" title="Food web in ecosystems"></a>Food web in ecosystems</h3><p>However in real world, food webs are much more complex than the ideal model in the museum, thus they cannot be represented by the method above. In order to help audience learn more about the real food webs, we design several ways of visualization. </p>
+<p>Click on the Ecosystem button on the menubar, and choose the ecosystem that you are interested in from the dropdown. For example, Carpinteria from <a href="https://www.nceas.ucsb.edu/interactionweb/index.html" target="_blank" rel="noopener">IWDB</a>, which is a salt marsh. The layout is as follows:</p>
+<p><img src="/assets/vis/vis4.png" alt="vis4"></p>
+<ol>
+<li>The 2D circle visualization puts each species around the big circle and connect each pair of interaction(e.g. predator-pray) with lines. Color represents different groups. In this way, we can learn about the complexity directly. Background is a picture of this ecosystem. </li>
+</ol>
+<ul>
+<li>click on the “subwebs” labels on the left bottom to select which subweb(s) to display, in order to simplify the model,</li>
+</ul>
+<p><img src="/assets/vis/vis7.gif" alt="vis7"></p>
+<ul>
+<li>click on each point on the circle to learn about this species, the information is shown on the left box, and the food chain around it is shown below. It helps audience learn what’s in this ecosystem in details,</li>
+</ul>
+<p><img src="/assets/vis/vis8.gif" alt="vis8"></p>
+<ul>
+<li><p>Although richness and topology are captured by graphic depictions, the utility of the depictions is often limited to impressing upon the viewer the overwhelming structural complexity of the systems. In fact, it is more complicated than illustrated, being based on a dataset comprising 128 species and 2290 interspecific interactions. We need to provide some statistics, for example, connectance, a number of measures and summary statistics are used to describe and compare food webs, which shown on the left bottom side. C = L/S^2, where L is the number of directional links in the network, and S is the number of nodes or species. Connectance values are generally well below one, reflecting the relative sparsity of links in food webs.</p>
+<p>Audience can compare the number of species and interaction, connectance between different ecosystems. What’s more, they can double click on the species on the big circle to remove the species from the system, connectance will change. However, different species play different role in the ecosystem, thus having different influence on the ecosystem. It is an innovative approach to discover the importance of a certain species. </p>
+<p><img src="/assets/vis/vis10.gif" alt="vis10"></p>
+<p>Notice that no species can be independent from the whole ecosystem, every one of them is indispensable to the food web.</p>
+</li>
+</ul>
+<ol start="2">
+<li>The animated 3D structure put species of the same trophic level at certain height around a circle, and shows how energy flow in to nect trophic level by connecting each interaction. It is hierarchyical model which is similar to the Ecological Pyramid (or Trophic pyramid). Unlike the 2D visualization that puts all links inside one circle, which is messy, this model describles the structure of each trophic level clearly, and animates the process of energy flow. It allows for user interaction. Audience can zoom in/out and rotate with mouse control. </li>
+</ol>
+<p><img src="/assets/vis/vis9.gif" alt="vis9"></p>
+<ol start="3">
+<li>The interaction matrix which is shown on the bottom is a simple and direct way to depict the interactions in the ecosystem, to get an overview of structure and complexity.</li>
+</ol>
+<p><img src="/assets/vis/vis5.png" alt="vis5"></p>
+<p>Besides Carpinteria, there are other ecosytems for audience to explore:</p>
+<ul>
+<li>Baja California, an ocean ecosystem, is much more complicated. In the ocean, small fish is eaten by big fish, big fish is eaten by bigger fish… thus forms long food chains. There are 11 trophic levels:</li>
+</ul>
+<p><img src="/assets/vis/vis13.gif" alt="vis13"></p>
+<ul>
+<li>Berwick, a pine forest:</li>
+</ul>
+<p><img src="/assets/vis/vis14.gif" alt="vis14"></p>
+<h3 id="Energy-pyramid"><a href="#Energy-pyramid" class="headerlink" title="Energy pyramid"></a>Energy pyramid</h3><p>Click on “Energy” on the menu. This is a small game to illustrate energy pyramid and significance of environmental protection. </p>
+<p>An energy pyramid is shown as below, a graphical representation designed to show the biomass or bioproductivity at each trophic level in a given ecosystem. each point stands for a species, the lowest level consistd of producers like plants and alges, top level are mainly big predators.<br>Click on speices to add energy or plastic waste to it, and see how they transfer along the food web:</p>
+<ol>
+<li>An energy pyramid is a presentation of the trophic levels in an ecosystem. Energy from the sun is transferred through the ecosystem by passing through various trophic levels. Roughly 10% of the energy is transferred from one trophic level to the next, thus preventing a large number of trophic levels. There must be higher amounts of biomass at the bottom of the pyramid to support the energy and biomass requirements of the higher trophic levels.</li>
+</ol>
+<p><img src="/assets/vis/vis11.gif" alt="vis11"></p>
+<ol start="2">
+<li>When plastic is part of the food chain:<br>Microplastics are plastic pieces smaller than 5 mm. This can include extremely small plastic pieces used in household products, clothing fibres and large plastic pieces that degrade into smaller fragments.<br>Microplastics can accumulate in fish, birds and other marine life. Because they do not break down rapidly, the amount in the sea and fish will continue to accumulate, making the problem worse over time, until we manage to reduce the amount of plastic in the sea.</li>
+</ol>
+<p><img src="/assets/vis/vis12.gif" alt="vis12"></p>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    <a href="/tags/Visualization-Food-Web-Processing-Web-UI/">Visualization, Food Web, Processing, Web, UI</a>
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+
+
+
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+
+<script src="/js/jquery.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+
+</html>

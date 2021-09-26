@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+    <!--Description-->
+    
+        <meta name="description" content="Assignments for course CSCi5607 at UMN with Prof. Stephen J. Guy.HW1 - Graphics warmup, HW2 - Image Processing, HW3 - Ray tracing, HW0.5 - OpenGL star">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Xuefei Li">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Computer Graphics practice"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="XuefeiLi(李雪霏)"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>Computer Graphics practice - XuefeiLi(李雪霏)</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/reset.css">
+
+    
+<link rel="stylesheet" href="/css/main.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!--Favicon-->
+    
+        <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+    
+
+<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body>
+
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Menu -->
+<!-- Navigation -->
+<header>
+    <div class="logo">
+        <a href="/">XuefeiLi(李雪霏)</a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+            
+        </ul>
+    </nav><!-- end navigation menu -->
+
+</header><!-- end header -->
+
+
+<!-- Main Content -->
+<section class="main clearfix">
+
+    <section class="top" style="background: url('/assets/header.jpeg');">
+        <div class="wrapper content_header clearfix">
+            
+
+<div class="work_nav">
+
+    <ul class="btn clearfix">
+        
+        <li><a href="/2019/10/08/Texture-map/" class="previous" data-title="Texture map"></a></li>
+        
+        <li><a href="/" class="grid" data-title="Portfolio"></a></li>
+        
+        <li><a href="/2018/10/14/Dear-Data/" class="next" data-title="Dear Data"></a></li>
+        
+    </ul>
+
+</div><!-- end work_nav -->
+            <h1 class="title">Computer Graphics practice</h1>
+        </div>
+    </section><!-- end top -->
+
+    <section class="wrapper">
+        <div class="content">
+
+            <!-- Gallery -->
+            
+
+            <!-- Content -->
+            <p>Assignments for course CSCi5607 at UMN with Prof. Stephen J. Guy.<br>HW1 - Graphics warmup, HW2 - Image Processing, HW3 - Ray tracing, HW0.5 - OpenGL startup, HW4 - 3D Game.</p>
+<h3 id="HW4-3D-Game"><a href="#HW4-3D-Game" class="headerlink" title="HW4 - 3D Game"></a>HW4 - 3D Game</h3><p> <a href="https://youtu.be/9eI7D6LXkTo" target="_blank" rel="noopener">Demo</a></p>
+<ul>
+<li><em>Walls &amp; Doors:</em> Each map element type must have a unique rendering. Walls must look different than doors, and each of the five doors must look different than each other.</li>
+</ul>
+<ul>
+<li><p><em>Keys:</em> Each key must be rendered as a physical object (e.g., a cube, teapot, or key model). Whenever a player moves the key must be rendered in front of them moving with the character.</p>
+</li>
+<li><p><em>User Input:</em> Users must be able to move around the map with mouse or keyboard input. One easy solution is to rotate with the left and right keys and move forward and back with the up and down keys.</p>
+</li>
+<li><p><em>Collision Detection:</em> Users must not be able to move through walls or locked doors.</p>
+</li>
+<li><p><em>Floors &amp; Ceilings:</em> Floors must be rendered, the ceiling is optional.</p>
+</li>
+<li><p><em>Lighting:</em> Your scene must have some ambient and diffuse lighting.</p>
+</li>
+</ul>
+<p><img src="/assets/cg/cg1.png" alt="cg1"></p>
+<p><img src="/assets/cg/cg2.png" alt="cg2"></p>
+<p>​                      obtaining the key                                                 finding the door</p>
+<ul>
+<li>Texture map the walls and floors</li>
+</ul>
+<p><img src="/assets/cg/cg3.png" alt="cg3"></p>
+<ul>
+<li><p>Integrated keyboard and mouse control (must support strafing/sidestepping)<br>Up/Down key to step forward/backward<br>Left/Right for direction: turn left/right<br>‘A’ to grab objects(key)</p>
+</li>
+<li><p>Add characters to the environment which move on their own (perhaps chase the user slowly). These characters should not move through walls.</p>
+</li>
+</ul>
+<p><img src="/assets/cg/cg4.png" alt="cg4"></p>
+<p>Enemy is a Black and white plaid sphere, that move back and forth, game over when the player is attacked by the enemy.</p>
+<ul>
+<li><em>Character interaction:</em> Allow the user to freeze or shoot the other characters at a distance (you cannot freeze or shoot through walls!). press SPACE to strafe the enemy in a distance (with white sphere bullet) or use direction key for sidestepping</li>
+<li>Animate the process of doors opening after they are unlocked.</li>
+</ul>
+<p><img src="/assets/cg/cg5.png" alt="cg5"></p>
+<ul>
+<li>Use models to represent the user, keys, doors, non-player characters etc. Extra points if you create these yourself (e.g., with <a href="http://www.wings3d.com/" target="_blank" rel="noopener">http://www.wings3d.com/</a>).</li>
+</ul>
+<p><img src="/assets/cg/cg6.png" alt="cg6"></p>
+<ul>
+<li>Load models in the OBJ 3d models format.<br>see model/mykey.txt which is transformed from an obj model built with wings3d.</li>
+</ul>
+<p><img src="/assets/cg/cg7.png" alt="cg7"></p>
+<p>the colorful sphere is the goal</p>
+<h3 id="HW0-5-OpenGL-startup"><a href="#HW0-5-OpenGL-startup" class="headerlink" title="HW0.5 - OpenGL startup"></a>HW0.5 - OpenGL startup</h3><ul>
+<li><em>SDL_CreateWindow</em></li>
+<li>We made use of a depth buffer to prevent faces rendering to the front while they’re behind other faces. When depth testing is  enabled. OpenGL tests the depth value of a fragment against the content of the depth buffer.  OpenGL performs a depth test and if this test passes, the depth buffer is updated with the new depth value. If depth test falls, the fragment is discarded.</li>
+</ul>
+<p><img src="/assets/cg/cg8.gif" alt="cg8">)<img src="/assets/cg/cg9.gif" alt="cg9"></p>
+<p>pressing up/down on the keyboard</p>
+<p>Teapot rendering, Phong lighting model</p>
+<ul>
+<li>translate the model by pressing up/down/right/left on the keyboard, speed up the rotation by pressing “R”.</li>
+</ul>
+<p><img src="/assets/cg/cg10.gif" alt="cg10">)<img src="/assets/cg/cg11.gif" alt="cg11"></p>
+<ul>
+<li><em>Blinn–Phong reflection model</em>, brighter</li>
+</ul>
+<p><img src="/assets/cg/cg12.gif" alt="cg12"></p>
+<ul>
+<li>press ‘c’ to change color randomly</li>
+</ul>
+<p><img src="/assets/cg/cg13.gif" alt="cg13"></p>
+<ul>
+<li>press “L“ to rotate the direction of light</li>
+</ul>
+<p><img src="/assets/cg/cg14.gif" alt="cg14"></p>
+<ul>
+<li>Use a point light located at (-1.5, 0, 0).</li>
+</ul>
+<p><img src="/assets/cg/cg15.gif" alt="cg15"></p>
+<ul>
+<li>gouraud rendering, hardly any rendering quality loss, and it is faster</li>
+</ul>
+<p><img src="/assets/cg/cg16.gif" alt="cg16"></p>
+<h3 id="HW3-Ray-tracing"><a href="#HW3-Ray-tracing" class="headerlink" title="HW3 - Ray tracing"></a>HW3 - Ray tracing</h3><ul>
+<li>Basic features:</li>
+</ul>
+<p>Arbitrary camera placement, film resolution, and aspect ratio<br>Arbitrary scenes with spheres, triangles (possible with vertex normals), and arbitrary background colors<br>Color &amp; Specularity (Phong Lighting Model)<br>Arbitrary materials, including diffuse and specular shading, reflections, and refractions<br>Ambient lighting, Point and directional lights<br>Shadows<br>Recursion to a bounded depth<br>Difference/Intersection of spheres (Constructive Solid Geometry)<br>Triangles<br>BMP or PNG output</p>
+<p><img src="/assets/cg/cg17.jpg" alt="cg17">)<img src="/assets/cg/cg18.jpg" alt="cg18">)!<img src="/assets/cg/cg19.jpg" alt="cg19">)<img src="/assets/cg/cg20.jpg" alt="cg20">)<img src="/assets/cg/cg21.jpg" alt="cg21"></p>
+<ul>
+<li>Additional features:</li>
+</ul>
+<ol>
+<li><p>An acceleration structure: Bounding Volume Hierarchy (BVH).<br>See aabb.h, put sphere and triangle objects into box(aabb), intersect with the object when the box is hit by the ray. Then build a bvh tree, see bvhnode.h.<br>result from no bvh to using bvh. Use line331 in main.cpp and instead of line330, then rebuild the project.<br>-pic (a): 3s -&gt; 7s<br>-pic (b): 6s -&gt; 18s<br>-pic (c): 4s -&gt; 4s<br>-pic (d): approximately 1h -&gt; 178s<br>We can see that in a simple scene with a few objects, especially evenly distributed scene, bvh structure work worse. Because it spend more time building the hierarchy structure. However, in a complex scene like the dragon, bvh structure is much more efficient.</p>
+</li>
+<li><p>Parallelize the raytracer with OpenMP<br>Include omp.h, see line 336 in main.cpp. , #pragma omp parallel for. Time for rendering pic(d) is reduced to 47s.</p>
+</li>
+<li><p>Jittered supersampling<br>See line 340 main.cpp, multiple samples per pixel, adding random noise each sample.<br>sn is the number of samples per pixel. sn=1 denotes uniform supersampling. Image becomes smoother when sn is bigger, but it may overkill simple area of the image; also, it will multiply the time.</p>
+</li>
+<li><p>User interface that shows the raytraced image being updated<br>implemeneted in testui.py. Run <em>python testui.py</em> on command line after building the raytracer execuatble.</p>
+</li>
+</ol>
+<p><img src="/assets/cg/cg22.png" alt="cg22"></p>
+<ol start="5">
+<li>Boxes and Planes</li>
+</ol>
+<p><img src="/assets/cg/cg23.jpg" alt="cg23"></p>
+<h3 id="HW2-Image-Processing"><a href="#HW2-Image-Processing" class="headerlink" title="HW2 - Image Processing"></a>HW2 - Image Processing</h3><ol>
+<li>Contrast: Change the contrast and saturation: Change the saturation of an image by factor 0.7, 1.1, 1.4.</li>
+</ol>
+<p><img src="/assets/cg/cg28.png" alt="cg28"></p>
+<ol start="2">
+<li>Quantize: Change the number of bits per channel of an image, using simple rounding, nbits=6, 4, 2.</li>
+</ol>
+<p><img src="/assets/cg/cg29.png" alt="cg29"></p>
+<ol start="3">
+<li>Random dither: Convert an image to a given number of bits per channel, using a randomized threshold, nbits=4, 2, 1.</li>
+</ol>
+<p><img src="/assets/cg/cg30.png" alt="cg30"></p>
+<p>​        Floyd-Steinberg dither: Convert an image to a given number of bits per channel, using dithering with error diffusion, nbits=4, 2, 1.</p>
+<p><img src="/assets/cg/cg31.png" alt="cg31"></p>
+<p>​        Ordered dither: Convert an image to a given number of bits per channel, nbits=4, 2, 1.</p>
+<p><img src="/assets/cg/cg32.png" alt="cg32"></p>
+<ol start="4">
+<li><p>Scale: Scale an image up or down in size by a real valued factor with inverse wrapping, and rotate<br><img src="/assets/cg/cg35.png" alt="cg35"><br>using point sampling, bilinear sampling, and Gaussian sampling<br><img src="/assets/cg/cg36.png" alt="cg36"></p>
+</li>
+<li><p>Additional: Warp an image using a non-linear mapping</p>
+</li>
+</ol>
+<p><img src="/assets/cg/cg38.png" alt="cg38"></p>
+<h3 id="HW1-Graphics-Warmup"><a href="#HW1-Graphics-Warmup" class="headerlink" title="HW1 - Graphics Warmup"></a>HW1 - Graphics Warmup</h3><p><img src="/assets/cg/cg40.gif" alt="cg40">)<img src="/assets/cg/cg41.gif" alt="cg41">)<img src="/assets/cg/cg42.gif" alt="cg42">)<img src="/assets/cg/cg43.gif" alt="cg43"></p>
+
+
+            <!-- Tags -->
+            
+
+
+<div class="tags">
+    <a href="/tags/Computer-Graphics-rendering-ray-tracing-image-processing/">Computer Graphics, rendering, ray tracing, image processing</a>
+</div>
+
+
+
+            <!-- Comments -->
+            <div>
+                
+
+
+
+
+            </div>
+        </div><!-- end content -->
+    </section>
+</section><!-- end main -->
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+
+<script src="/js/jquery.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+
+</html>
